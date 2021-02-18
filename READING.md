@@ -1,2 +1,3 @@
 fourth file
-change prior checkout
+post checkout
+change to check with log
