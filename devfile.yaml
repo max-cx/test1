@@ -9,3 +9,4 @@ components:
       
 # minimal devfile
 # https://github.com/eclipse/che/issues/21560
+# https://github.com/eclipse-che/che-operator/pull/1486
