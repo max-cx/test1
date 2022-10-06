@@ -1,2 +1,4 @@
 id: che-incubator/che-code/insiders
 registryUrl: https://eclipse-che.github.io/che-plugin-registry/main/v3
+
+# https://github.com/eclipse/che/issues/21639
