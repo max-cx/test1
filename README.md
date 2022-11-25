@@ -14,7 +14,7 @@ Here are some examples of the UI elements in Visual Studio Code - Open Source th
 * The Status Bar icon
 * The Get Started page
 * The tab icon for the Get Started page
-* The application name in the *About* dialog
+* The application name in the **About** dialog
 
 
 ### Prerequisites
@@ -24,7 +24,7 @@ Here are some examples of the UI elements in Visual Studio Code - Open Source th
 
 ### Procedure
 
-1\. Fork or download the Git [repository](https://github.com/che-incubator/che-code/tree/main/) of Visual Studio Code - Open Source IDE for {prod}.
+1\. Fork or download the Git [repository](https://github.com/che-incubator/che-code/tree/main/) of Visual Studio Code - Open Source IDE for Eclipse Che.
 
 2\. In the `/branding/` folder of the repository, create the `product.json` file, which maps custom branding resources. The values defined in the `/branding/product.json` file override the [default values](https://github.com/che-incubator/che-code/blob/main/code/product.json).
 
@@ -36,17 +36,17 @@ The following example shows all of the properties that you can customize by usin
 
 ```
 {
-    "nameShort": "The application name for UI elements",
-    "nameLong": "Red Hat OpenShift Dev Spaces with Microsoft Visual Studio Code - Open Source IDE",
+    "nameShort": "Branded IDE",
+    "nameLong": "Branded Instance of Eclipse Che with Branded Microsoft Visual Studio Code - Open Source IDE",
     "icons": {
         "favicon": {
             "universal": "icons/favicon.ico"
         },
         "welcome": {
-            "universal": "icons/dev-spaces.svg"
+            "universal": "icons/icon.svg"
         },
         "statusBarItem": {
-            "universal": "icons/dev-spaces.svg"
+            "universal": "icons/icon.svg"
         },
         "letterpress": {
             "light": "icons/letterpress-light.svg",
@@ -54,9 +54,9 @@ The following example shows all of the properties that you can customize by usin
         }
     },
     "remoteIndicatorCommands": {
-        "openDocumentationCommand": "Dev Spaces: Open Documentation",
-        "openDashboardCommand": "Dev Spaces: Open Dashboard",
-        "stopWorkspaceCommand": "Dev Spaces: Stop Workspace"
+        "openDocumentationCommand": "Branded IDE: Open Documentation",
+        "openDashboardCommand": "Branded IDE: Open Dashboard",
+        "stopWorkspaceCommand": "Branded IDE: Stop Workspace"
     },
     "workbenchConfigFilePath": "workbench-config.json",
     "codiconCssFilePath": "css/codicon.css"
@@ -65,17 +65,17 @@ The following example shows all of the properties that you can customize by usin
 
 `nameShort` is the application name for UI elements.
 
-`nameLong` is the application name that is used for the *Welcome* page, **About** dialog, and browser tab title.
+`nameLong` is the application name that is used for the **Welcome** page, **About** dialog, and browser tab title.
 
 `favicon` is the icon for the browser tab title for all themes.
 
 `welcome` is the icon for the tab title of the **Get Started** page for all themes.
 
-`statusBarItem` is the icon for the bottom *Status Bar* for all themes. Define it as `codicon` in the `workbench-config.json` file and the `codicon` CSS styles.
+`statusBarItem` is the icon for the bottom **Status Bar** for all themes. Define it as `codicon` in the `workbench-config.json` file and the `codicon` CSS styles.
 
 `letterpress` is the icon for the empty editor area when no editor is open. You can provide different icon files for `light` and `dark` themes.
 
-`remoteIndicatorCommands` is the names of commands provided by the [Eclipse Che Remote](https://github.com/che-incubator/che-code/blob/main/code/extensions/che-remote/package.nls.json) extension. Users can run these commands by clicking the *Status Bar*.
+`remoteIndicatorCommands` is the names of commands provided by the [Eclipse Che Remote](https://github.com/che-incubator/che-code/blob/main/code/extensions/che-remote/package.nls.json) extension. Users can run these commands by clicking the **Status Bar**.
 
 `workbenchConfigFilePath` is the relative path to `workbench-config.json`, which is explained in one of the next steps.
 
@@ -134,15 +134,15 @@ $ ./branding/branding.sh
 7\. Build the container image from the `/che-code/` directory and push the image to a container registry:
 
 ```
-$ {docker-cli} build -f build/dockerfiles/linux-musl.Dockerfile -t linux-musl-amd64 .
+$ docker build -f build/dockerfiles/linux-musl.Dockerfile -t linux-musl-amd64 .
 
-$ {docker-cli} build -f build/dockerfiles/linux-libc.Dockerfile -t linux-libc-amd64 .
+$ docker build -f build/dockerfiles/linux-libc.Dockerfile -t linux-libc-amd64 .
 
 $ export DOCKER_BUILDKIT=1
 
-$ {docker-cli} build -f build/dockerfiles/assembly.Dockerfile -t vs-code-open-source .
+$ docker build -f build/dockerfiles/assembly.Dockerfile -t vs-code-open-source .
 
-$ {docker-cli} push <username>/vs-code-open-source:next
+$ docker push <username>/vs-code-open-source:next
 ```
 
 8\. Create a `/.che/che-editor.yaml` file in the remote repository that you intend to clone into workspaces. This file must specify the container image of your customized Visual Studio Code - Open Source that is to be pulled for new workspaces.
