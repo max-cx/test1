@@ -30,13 +30,13 @@ Here are some examples of the UI elements in Visual Studio Code - Open Source th
 
 ## Procedure
 
-1. Fork or download the Git [repository](https://github.com/che-incubator/che-code/tree/main/) of Visual Studio Code - Open Source IDE for {prod}.
+##### 1. Fork or download the Git [repository](https://github.com/che-incubator/che-code/tree/main/) of Visual Studio Code - Open Source IDE for {prod}.
 
-2. In the `/branding/` folder of the repository, create the `product.json` file, which maps custom branding resources.
+##### 2. In the `/branding/` folder of the repository, create the `product.json` file, which maps custom branding resources.
 
 TIP: In the `product.json` file, specify all paths relative the `/branding/` folder.
 
-### `/branding/product.json`
+###### `/branding/product.json`
 
 The following example shows all of the properties that you can customize by using this file:
 
