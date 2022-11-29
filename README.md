@@ -6,8 +6,6 @@
 \
 This means first adding brand-related files to the forked IDE repository, then building a container image of the branded IDE, and finally adding a `che-editor.yaml` file to the project repository.
 
-Just a change.
-
 Here are some examples of the UI elements in Visual Studio Code - Open Source that you can brand:
 
 * Browser tab title and icon
