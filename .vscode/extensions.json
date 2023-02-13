@@ -1,6 +1,6 @@
   {
     "recommendations": [
-      "rhdevelopers-ci.redhat.vscode-xml",
+      "redhat.vscode-xml",
       "GitLab.gitlab-workflow",
       "joedevivo.vscode-circuitpython",
     ]
